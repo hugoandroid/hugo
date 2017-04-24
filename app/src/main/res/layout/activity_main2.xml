@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/ll_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--<com.hwl.universitypie.VideoTopBar-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"/>-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#0f0"/>
+    <com.hwl.universitypie.VideoTopBar2
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#0f0"/>
+    <com.hwl.universitypie.VideoTopBar3
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#0f0"/>
+    <include layout="@layout/item"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#0f0"/>
+    <include layout="@layout/item1"/>
+</RelativeLayout>
