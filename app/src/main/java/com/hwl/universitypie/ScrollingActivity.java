@@ -31,7 +31,5 @@ public class ScrollingActivity extends AppCompatActivity {
         });
         Snackbar.make(toolbar, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show();
-        Snackbar.make(toolbar, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show();
     }
 }
