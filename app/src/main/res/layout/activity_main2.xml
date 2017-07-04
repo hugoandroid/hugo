@@ -1,34 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:id="@+id/ll_root"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <!--<com.hwl.universitypie.VideoTopBar-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"/>-->
-    <View
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/ll_root"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="10dp"
-        android:background="#0f0"/>
-    <com.hwl.universitypie.VideoTopBar2
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:gravity="center"
+                android:id="@+id/tv_viewpager"
+                android:text="viewpager 半屏幕测试"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/black"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:gravity="center"
+                android:id="@+id/tv_time_cost"
+                android:text="接口耗时测试"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/black"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:gravity="center"
+                android:id="@+id/tv_view_show"
+                android:text="view视图层级显示"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/black"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:gravity="center"
+                android:id="@+id/tv_view_inflate"
+                android:text="view_inflate 测试"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/black"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:gravity="center"
+                android:id="@+id/tv_view_share"
+                android:text="view share测试"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/black"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:gravity="center"
+                android:id="@+id/tv_date_select"
+                android:text="日期选择器 测试"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/black"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:gravity="center"
+                android:id="@+id/tv_intent_service"
+                android:text="intent service bind 测试"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/black"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:gravity="center"
+                android:id="@+id/tv_recycler"
+                android:text="recycler-mid-web 测试"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/black"/>
+        </LinearLayout>
+    </ScrollView>
+
+
+        <FrameLayout
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="#f00"
+            android:layout_gravity="center">
+
+            <com.hwl.universitypie.AnimView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:onClick="oncli"/>
+        </FrameLayout>
+
+    <com.hwl.universitypie.CircleView
+        android:id="@+id/tv_test"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="10dp"
-        android:background="#0f0"/>
-    <com.hwl.universitypie.VideoTopBar3
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="10dp"
-        android:background="#0f0"/>
-    <include layout="@layout/item"/>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="10dp"
-        android:background="#0f0"/>
-    <include layout="@layout/item1"/>
-</RelativeLayout>
+        android:layout_height="500dp"
+        android:visibility="gone"
+        android:onClick="onc"/>
+</LinearLayout>

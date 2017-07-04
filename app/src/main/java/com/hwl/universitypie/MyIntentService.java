@@ -8,12 +8,6 @@ import android.os.Looper;
 import android.os.SystemClock;
 import android.util.Log;
 
-/**
- * An {@link IntentService} subclass for handling asynchronous task requests in
- * a service on a separate handler thread.
- * <p>
- * helper methods.
- */
 public class MyIntentService extends IntentService {
     // TODO: Rename actions, choose action names that describe tasks that this
     // IntentService can perform, e.g. ACTION_FETCH_NEW_ITEMS
@@ -61,7 +55,6 @@ public class MyIntentService extends IntentService {
     @Override
     protected void onHandleIntent(Intent intent) {
         boolean b = Looper.myLooper() == Looper.getMainLooper();
-        Log.e("startActionFoo","main  "+b);
         if (intent != null) {
             final String action = intent.getAction();
             if (ACTION_FOO.equals(action)) {
@@ -83,7 +76,6 @@ public class MyIntentService extends IntentService {
     private void handleActionFoo(String param1, String param2) {
         e(param1+"    "+param2);
         boolean b = Looper.myLooper() == Looper.getMainLooper();
-        Log.e("startActionFoo","main  "+b);
         e(this.toString());
         new AsyncTask<Void, Integer, Void>() {
             @Override

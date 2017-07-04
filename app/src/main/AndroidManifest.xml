@@ -9,12 +9,15 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
+        android:name=".App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/fullScreen">
-        <activity android:name=".MainActivity">
+        android:theme="@style/BaseAppTheme">
+        <activity
+            android:name=".ui.MainActivity"
+            android:theme="@style/BaseAppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -27,10 +30,26 @@
             android:name=".MyIntentService"
             android:exported="false" />
 
+        <activity android:name=".swipe.SlidToFinishActivity" />
         <activity
             android:name=".ScrollingActivity"
             android:label="@string/title_activity_scrolling"
-            android:theme="@style/fullScreen"></activity>
+            android:theme="@style/fullScreen" />
+        <activity android:name=".ui.ViewpagerActivity" />
+        <activity android:name=".ui.ViewShowActivity" />
+        <activity android:name=".ui.ViewInflateActivity" />
+        <activity android:name=".ui.ShareViewActivity" />
+        <activity
+            android:name=".ui.ImgShowActivity"
+            android:theme="@style/Transparent" />
+        <activity android:name=".ui.ImgShowActivity21" />
+
+        <service
+            android:name=".ui.TestIntentService"
+            android:exported="false" />
+
+        <activity android:name=".ui.IntentServiceActivity" />
+        <activity android:name=".ui.RecyclerViewActivity"></activity>
     </application>
 
 </manifest>

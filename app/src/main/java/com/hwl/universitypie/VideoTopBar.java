@@ -7,10 +7,12 @@ import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.View;
+import android.view.ViewParent;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,6 +25,7 @@ import java.lang.reflect.Field;
 public class VideoTopBar extends LinearLayout implements View.OnClickListener {
 
     private TextView titleView;
+    private StringBuilder mStringBuilder;
 
     public VideoTopBar(Context context) {
         this(context,null);
@@ -34,16 +37,6 @@ public class VideoTopBar extends LinearLayout implements View.OnClickListener {
         int dp2px = dp2px(36);
         int barHeight = getStatusBarHeight();
         setBackgroundColor(Color.argb(99,0,0,0));
-        if(getParent() instanceof LinearLayout){
-            Toast.makeText(context,"LinearLayout",Toast.LENGTH_SHORT).show();
-        }else if(getParent() instanceof FrameLayout){
-            Toast.makeText(context,"FrameLayout",Toast.LENGTH_SHORT).show();
-        }else if(getParent() instanceof RelativeLayout){
-            Toast.makeText(context,"RelativeLayout",Toast.LENGTH_SHORT).show();
-        }else {
-            Toast.makeText(context,"other"+getParent(),Toast.LENGTH_SHORT).show();
-
-        }
         if(Build.VERSION.SDK_INT > 18){
             setLayoutParams(new LayoutParams(-1,dp2px+barHeight));
             setPadding(0,barHeight,0,0);
@@ -122,5 +115,19 @@ public class VideoTopBar extends LinearLayout implements View.OnClickListener {
         } catch (Exception e) {
             return 0;
         }
+    }
+    public String settext(){
+        mStringBuilder = new StringBuilder();
+        return getFather(titleView);
+    }
+    private String getFather(View view) {
+        ViewParent parent = view.getParent();
+        if(parent instanceof ScrollView){
+            mStringBuilder.append("ScrollView");
+        }else{
+            mStringBuilder.append(parent.toString()+"   ");
+            getFather((View) parent);
+        }
+        return mStringBuilder.toString();
     }
 }
