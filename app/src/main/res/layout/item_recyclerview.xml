@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:scaleType="centerCrop"
         android:src="@mipmap/bg_zuowen_01"
-        android:transitionName="share"
+        android:transitionName="image"
         android:id="@+id/iv_head"/>
     <TextView
         android:layout_width="match_parent"

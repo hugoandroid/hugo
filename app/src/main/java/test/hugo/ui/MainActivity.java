@@ -1,14 +1,10 @@
 package test.hugo.ui;
 
 import android.app.DatePickerDialog;
-import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.Toast;
@@ -19,9 +15,7 @@ import test.hugo.R;
 import test.hugo.VolleyUtil;
 import test.hugo.swipe.SlidToFinishActivity;
 
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -40,8 +34,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.tv_date_select).setOnClickListener(this);
         findViewById(R.id.tv_intent_service).setOnClickListener(this);
         findViewById(R.id.tv_recycler).setOnClickListener(this);
-
-
+        findViewById(R.id.tv_share_activity).setOnClickListener(this);
     }
     public void onc(View view){
         startActivity(new Intent(this, SlidToFinishActivity.class));
@@ -54,6 +47,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         switch (view.getId()){
+            case R.id.tv_share_activity:
+                startActivity(new Intent(this,BasicActivity.class));
+                break;
             case R.id.tv_intent_service:
                 startActivity(new Intent(this,IntentServiceActivity.class));
                 break;
