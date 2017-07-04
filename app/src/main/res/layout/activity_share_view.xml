@@ -5,6 +5,6 @@
     android:layout_width="match_parent"
     android:id="@+id/rv_data"
     android:layout_height="match_parent"
-    tools:context="com.hwl.universitypie.ui.ShareViewActivity">
+    tools:context="test.hugo.ui.ShareViewActivity">
 
 </android.support.v7.widget.RecyclerView>

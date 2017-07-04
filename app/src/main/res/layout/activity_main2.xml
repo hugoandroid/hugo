@@ -110,14 +110,14 @@
             android:background="#f00"
             android:layout_gravity="center">
 
-            <com.hwl.universitypie.AnimView
+            <test.hugo.AnimView
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
                 android:onClick="oncli"/>
         </FrameLayout>
 
-    <com.hwl.universitypie.CircleView
+    <test.hugo.CircleView
         android:id="@+id/tv_test"
         android:layout_width="match_parent"
         android:layout_height="500dp"
