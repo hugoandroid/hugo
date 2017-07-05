@@ -4,6 +4,7 @@ import android.app.DatePickerDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.DatePicker;
@@ -58,6 +59,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.tv_date_select:
                 showDateDialog();
+                Snackbar.make(view,"注意三星手机5.X 系统的日期选择器崩溃",Snackbar.LENGTH_SHORT).show();
                 break;
             case R.id.tv_view_share:
                 startActivity(new Intent(this, ShareViewActivity.class));
