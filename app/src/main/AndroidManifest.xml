@@ -54,8 +54,10 @@
             android:name=".ui.BasicActivity"
             android:label="@string/title_activity_basic"
             android:theme="@style/BaseAppTheme2" />
-        <activity android:name=".ui.BasicEndActivity"
-            android:theme="@style/BaseAppTheme2"/>
+        <activity
+            android:name=".ui.BasicEndActivity"
+            android:theme="@style/BaseAppTheme2" />
+        <activity android:name=".ui.ImgCenterActivity"></activity>
     </application>
 
 </manifest>

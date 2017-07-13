@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.tv_intent_service).setOnClickListener(this);
         findViewById(R.id.tv_recycler).setOnClickListener(this);
         findViewById(R.id.tv_share_activity).setOnClickListener(this);
+        findViewById(R.id.tv_drawable_center).setOnClickListener(this);
     }
     public void onc(View view){
         startActivity(new Intent(this, SlidToFinishActivity.class));
@@ -48,6 +49,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         switch (view.getId()){
+            case R.id.tv_drawable_center:
+                startActivity(new Intent(this,ImgCenterActivity.class));
+                break;
             case R.id.tv_share_activity:
                 startActivity(new Intent(this,BasicActivity.class));
                 break;
