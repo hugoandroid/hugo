@@ -16,6 +16,7 @@ public class App extends Application {
     public void onCreate() {
         super.onCreate();
         mSApp = this;
+        //hehehhhehe
     }
     public static App getInstance(){
         return mSApp;
