@@ -12,7 +12,7 @@ import android.widget.TextView;
  * @author Hugo
  * modify time 2017年7月13日11:11:01 add drawableTop support
  */
-public class DrawableCenterTextView extends TextView {
+public class DrawableCenterTextView extends android.support.v7.widget.AppCompatTextView {
 
     public DrawableCenterTextView(Context context, AttributeSet attrs,
                                   int defStyle) {
