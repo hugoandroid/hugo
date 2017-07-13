@@ -18,47 +18,19 @@ public class ExampleUnitTest {
     @Test
     public void addition_isCorrect() throws Exception {
         assertEquals(4, 2 + 2);
-        main1();
         System.out.println( Calendar.getInstance().get(Calendar.YEAR));
-    }
-    public int getCount() {
-        ArrayList<Boolean> list = new ArrayList<>();
-        for (int i = 1;i<=100;i++){
-            list.add(false);
-        }
-        for (int i = 1;i<100;i++){ //100个人
-            for (int j = 0;j<=100;j+=i) {
-                if(j>=list.size()) break;
-                list.set(j,!list.get(j));
-            }
-        }
-        int count = 0;
-        for (boolean b:list){
-            System.out.print(b+"  ");
-            if(b) count ++;
-        }
-        System.out.println();
-        System.out.println(count);
-        return count;
-    }
+        child01 child01 = new child01();
+        child02 child02 = new child02();
+        child01.a = 14;
+        child02.a = 27;
+        System.out.print(child01.a+"  "+child02.a);
 
-    public void main1() {
-        int a[] = {1,2,3,4,4,4,3,1,2,3 };
-        int c[] = new int[5];
-        for(int i=0;i<c.length;i++){
-            for(int j=0;j<a.length;j++){
-                if(a[j] == i){
-                    c[i]++;
-                }
-            }
-        }
-        int index = 0;
-        for(int j=0;j<c.length;j++){
-            for(int i=index;i<index + c[j];i++){
-                a[i] = j;
-            }
-            index +=c[j];
-        }
-        System.out.println(Arrays.toString(a));
+    }
+    static class Parent{
+        static int a;
+    }
+    static class child01 extends Parent{
+    }
+    static class child02 extends Parent{
     }
 }
